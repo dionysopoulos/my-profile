@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>My profile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Roboto:300,400,500,700,900" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+    integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="container">
+
+    <section class="card card--center" id="introduction">
+      <h1>Hello, I'm Giorgos 😎</h1>
+      <img src="IMG_6621.jpeg" class="avatar" alt="Giorgos Dionysopoulos">
+      <p>
+        I am a student at the Athens University of Economics and Business, where I study
+        <strong>Management Science and Technology</strong>. I’m also an Erasmus+ student at
+        <strong>Audencia Business School</strong> in Nantes, France.
+      </p>
+      <p>
+        I’ve worked with <strong>Python</strong>, <strong>Java</strong>, <strong>HTML</strong>, <strong>CSS</strong>,
+        and <strong>SQL</strong>. I like combining a business knowledge with technical skills to solve real problems.
+      </p>
+      <p>
+        Currently learning web development at
+        <a href="https://www.lewagon.com" target="_blank" rel="noopener">Le Wagon</a>.
+      </p>
+      <a class="btn"
+        href="https://www.linkedin.com/in/giorgos-dionysopoulos-232595296?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+        target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+        Get in touch with me!
+      </a>
+    </section>
+    <section class="card">
+      <h2>Skills</h2>
+      <p class="stack">
+        Programming: Python · Java · HTML · CSS · SQL<br />
+        Focus areas: Business Analysis · Data Analysis · Human Resource Management
+      </p>
+    </section>
+    <section class="card">
+      <h2>Business Analysis</h2>
+      <p>I’m learning to be the <strong>bridge</strong> between clients and developers.</p>
+    </section>
+
+    <section class="card">
+      <h2>Data Analysis</h2>
+      <p>Using <strong>analysis & visualization</strong> to extract insights and support decisions.</p>
+    </section>
+
+    <section class="card">
+      <h2>Human Resource Management</h2>
+      <p>Exploring the <strong>human factor</strong> that drives healthy, effective organizations.</p>
+    </section>
+    <section class="card card--center">
+      <h2>Connect with me</h2>
+      <ul class="list-inline" aria-label="social links">
+        <li>
+          <a href="https://www.linkedin.com/in/giorgos-dionysopoulos-232595296?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+            target="_blank" rel="noopener" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/dionysopoulos" target="_blank" rel="noopener" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+        </li>
+      </ul>
+      <textarea id="thought" placeholder="Leave a thought..." rows="3"></textarea>
+      <button class="btn" onclick="showThought()" aria-live="polite">
+        <i class="fas fa-paper-plane"></i> Send
+      </button>
+      <p id="displayThought" style="margin-top:8px;"></p>
+    </section>
+  </main>
+  <script>
+    function showThought() {
+      const el = document.getElementById("thought");
+      const val = el.value.trim();
+      if (val) {
+        document.getElementById("displayThought").textContent = `💭 “${val}” noted!`;
+        el.value = "";
+        el.focus();
+      }
+    }
+  </script>
+</body>
+
+</html>
